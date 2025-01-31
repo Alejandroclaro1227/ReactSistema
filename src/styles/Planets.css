@@ -1,0 +1,765 @@
+/* Estilos generales y variables */
+:root {
+  /* Paleta de colores espacial */
+  --space-dark: #030B17;
+  --space-light: #0A1A3B;
+  --star-color: #ffffff;
+  --neon-blue: #00F2FE;
+  --neon-purple: #4A0094;
+  --accent-pink: #FF2E63;
+  --accent-cyan: #08F7FE;
+  --nebula-1: rgba(255, 0, 255, 0.1);
+  --nebula-2: rgba(0, 247, 255, 0.1);
+  --nebula-3: rgba(255, 46, 99, 0.1);
+  --card-bg: rgba(10, 26, 59, 0.85);
+  --glass-effect: rgba(255, 255, 255, 0.1);
+  --text-primary: #FFFFFF;
+  --text-secondary: #B8C6D9;
+  --title-font: 'Orbitron', sans-serif;
+  --body-font: 'Exo 2', sans-serif;
+  --alt-font: 'Rajdhani', sans-serif;
+}
+
+/* Contenedor principal con efecto de estrellas mejorado */
+.planets-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--space-dark), var(--space-light));
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 0;
+  font-family: var(--body-font);
+}
+
+/* Efecto de estrellas animadas */
+.planets-container::before,
+.planets-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Primera capa de estrellas */
+.planets-container::before {
+  background-image: 
+    radial-gradient(1px 1px at 10% 10%, var(--star-color) 1px, transparent 0),
+    radial-gradient(1px 1px at 20% 20%, var(--star-color) 1px, transparent 0),
+    radial-gradient(1px 1px at 30% 30%, var(--star-color) 1px, transparent 0),
+    radial-gradient(1px 1px at 40% 40%, var(--star-color) 1px, transparent 0),
+    radial-gradient(2px 2px at 50% 50%, var(--star-color) 1px, transparent 0),
+    radial-gradient(2px 2px at 60% 60%, var(--star-color) 1px, transparent 0),
+    radial-gradient(2px 2px at 70% 70%, var(--star-color) 1px, transparent 0),
+    radial-gradient(2px 2px at 80% 80%, var(--star-color) 1px, transparent 0),
+    radial-gradient(2px 2px at 90% 90%, var(--star-color) 1px, transparent 0);
+  background-size: 550px 550px;
+  animation: stars 100s linear infinite;
+}
+
+/* Segunda capa de estrellas */
+.planets-container::after {
+  background-image: 
+    radial-gradient(1px 1px at 15% 15%, var(--star-color) 1px, transparent 0),
+    radial-gradient(1px 1px at 25% 25%, var(--star-color) 1px, transparent 0),
+    radial-gradient(1px 1px at 35% 35%, var(--star-color) 1px, transparent 0),
+    radial-gradient(1px 1px at 45% 45%, var(--star-color) 1px, transparent 0),
+    radial-gradient(2px 2px at 55% 55%, var(--star-color) 1px, transparent 0),
+    radial-gradient(2px 2px at 65% 65%, var(--star-color) 1px, transparent 0),
+    radial-gradient(2px 2px at 75% 75%, var(--star-color) 1px, transparent 0),
+    radial-gradient(2px 2px at 85% 85%, var(--star-color) 1px, transparent 0),
+    radial-gradient(2px 2px at 95% 95%, var(--star-color) 1px, transparent 0);
+  background-size: 400px 400px;
+  animation: stars 50s linear infinite;
+}
+
+/* Nebulosas animadas */
+.nebula {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.nebula-1 {
+  background: radial-gradient(circle at 20% 30%, var(--nebula-1), transparent 40%);
+  animation: nebula 30s ease infinite alternate;
+}
+
+.nebula-2 {
+  background: radial-gradient(circle at 80% 60%, var(--nebula-2), transparent 40%);
+  animation: nebula 25s ease infinite alternate-reverse;
+}
+
+.nebula-3 {
+  background: radial-gradient(circle at 50% 50%, var(--nebula-3), transparent 40%);
+  animation: nebula 35s ease infinite alternate;
+}
+
+/* Cometa animado */
+.comet {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background: var(--star-color);
+  border-radius: 50%;
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 0 0 2px rgba(255, 255, 255, 0.1),
+    0 0 0 3px rgba(255, 255, 255, 0.1),
+    0 0 0 4px rgba(255, 255, 255, 0.1),
+    0 0 0 5px rgba(255, 255, 255, 0.1),
+    0 0 0 6px rgba(255, 255, 255, 0.1);
+  animation: comet 20s linear infinite;
+}
+
+/* Animaciones */
+@keyframes stars {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-550px);
+  }
+}
+
+@keyframes nebula {
+  0% {
+    opacity: 0.3;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1.5) rotate(360deg);
+  }
+}
+
+@keyframes comet {
+  0% {
+    transform: translate(-100%, -100%) rotate(45deg);
+  }
+  100% {
+    transform: translate(200%, 200%) rotate(45deg);
+  }
+}
+
+/* Efecto de brillo en hover para las cards */
+.planet-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, 
+    var(--neon-blue), 
+    var(--accent-pink), 
+    var(--neon-purple), 
+    var(--accent-cyan)
+  );
+  z-index: -1;
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.planet-card:hover::before {
+  opacity: 1;
+  animation: borderGlow 3s linear infinite;
+}
+
+@keyframes borderGlow {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Header con efecto glassmorphism */
+.planets-header {
+  background: rgba(26, 31, 60, 0.8);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--glass-effect);
+  padding: 2rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Título con efecto neón */
+.planets-title {
+  font-family: var(--title-font);
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  background: linear-gradient(45deg, var(--accent-cyan), var(--neon-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(8, 247, 254, 0.5);
+}
+
+.title-accent {
+  color: var(--accent-pink);
+  font-weight: 900;
+  display: block;
+  font-size: 2rem;
+  text-shadow: 0 0 15px rgba(255, 46, 99, 0.7);
+}
+
+/* Tabs personalizados */
+.planets-tabs {
+  margin: 0 auto;
+  max-width: 500px;
+  background: var(--card-bg);
+  border-radius: 15px;
+  padding: 0.5rem;
+  border: 1px solid var(--glass-effect);
+}
+
+.MuiTabs-root {
+  min-height: 48px;
+}
+
+.MuiTab-root {
+  color: var(--text-secondary) !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.MuiTab-root.Mui-selected {
+  color: var(--neon-blue) !important;
+  text-shadow: 0 0 10px var(--neon-blue);
+}
+
+/* Barra de búsqueda mejorada */
+.search-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  gap: 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(8, 247, 254, 0.1);
+}
+
+.search-input .MuiOutlinedInput-root {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.search-input .MuiOutlinedInput-root:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.search-input .MuiOutlinedInput-root.Mui-focused {
+  border-color: var(--neon-blue);
+  box-shadow: 0 0 20px rgba(8, 247, 254, 0.2);
+}
+
+.search-icon {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-input .MuiInputBase-input {
+  font-family: var(--body-font) !important;
+  font-size: 1.1rem !important;
+}
+
+/* Cards de planetas */
+.planet-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  cursor: pointer;
+}
+
+.planet-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--neon-blue);
+  box-shadow: 
+    0 0 20px rgba(8, 247, 254, 0.3),
+    0 0 40px rgba(8, 247, 254, 0.1);
+}
+
+.planet-image-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 10px 10px 0 0;
+}
+
+.planet-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.planet-card:hover .planet-image {
+  transform: scale(1.1);
+}
+
+.planet-content {
+  padding: 1.5rem;
+  background: linear-gradient(
+    to top,
+    rgba(26, 31, 60, 0.95),
+    rgba(26, 31, 60, 0.7)
+  );
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.planet-name {
+  font-family: var(--title-font);
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  background: linear-gradient(45deg, var(--text-primary), var(--neon-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px rgba(8, 247, 254, 0.3);
+  margin-bottom: 0.5rem !important;
+}
+
+.planet-description {
+  font-family: var(--body-font);
+  font-size: 1.1rem !important;
+  line-height: 1.6 !important;
+  color: var(--text-secondary) !important;
+  font-weight: 400 !important;
+}
+
+/* Animaciones */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .planets-title {
+    font-size: 2.5rem;
+  }
+
+  .search-container {
+    margin: 1rem;
+    padding: 0.8rem;
+  }
+
+  .planet-card {
+    margin: 0.5rem;
+  }
+
+  .planet-image {
+    height: 200px;
+  }
+
+  .planet-name {
+    font-size: 1.5rem;
+  }
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--space-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--neon-blue), var(--neon-purple));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(var(--neon-purple), var(--neon-blue));
+}
+
+/* Efectos de carga */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--space-dark);
+}
+
+.MuiCircularProgress-root {
+  color: var(--neon-blue) !important;
+}
+
+/* Efectos de hover para botones */
+.sort-button {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  padding: 12px !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  transition: all 0.3s ease !important;
+}
+
+.sort-button:hover {
+  background: rgba(8, 247, 254, 0.15) !important;
+  border-color: var(--neon-blue) !important;
+  transform: rotate(180deg);
+  box-shadow: 0 0 15px rgba(8, 247, 254, 0.3);
+}
+
+.sort-button.active {
+  background: rgba(8, 247, 254, 0.2) !important;
+  border-color: var(--neon-blue) !important;
+  color: var(--neon-blue) !important;
+}
+
+/* Estilos para la vista de detalle */
+.planet-detail-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #030B17, #0A1A3B);
+  padding: 2rem 0;
+  position: relative;
+}
+
+.planet-detail-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(8, 247, 254, 0.1), transparent 70%),
+    radial-gradient(circle at 80% 70%, rgba(255, 46, 99, 0.1), transparent 70%);
+  pointer-events: none;
+}
+
+.back-button {
+  position: absolute !important;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #fff !important;
+  padding: 12px !important;
+  transition: all 0.3s ease !important;
+}
+
+.back-button:hover {
+  background: rgba(8, 247, 254, 0.2) !important;
+  transform: scale(1.1);
+}
+
+.planet-image-card {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.detail-image {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 1rem;
+  box-shadow: 0 0 30px rgba(8, 247, 254, 0.3);
+}
+
+.planet-detail-title {
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem !important;
+  font-weight: 700 !important;
+  text-align: center;
+  margin: 1rem 0 !important;
+  text-shadow: 0 0 20px rgba(8, 247, 254, 0.5);
+}
+
+.planet-detail-card {
+  background: rgba(10, 26, 59, 0.9) !important;
+  backdrop-filter: blur(10px);
+  border-radius: 20px !important;
+  border: 1px solid rgba(8, 247, 254, 0.2);
+  overflow: hidden;
+}
+
+.detail-tabs {
+  background: rgba(8, 247, 254, 0.15) !important;
+  padding: 0.5rem !important;
+  margin-bottom: 1rem;
+}
+
+.detail-tabs .MuiTab-root {
+  color: #B8C6D9 !important;
+  font-family: 'Orbitron', sans-serif !important;
+  text-transform: none !important;
+  min-height: 60px !important;
+}
+
+.detail-tabs .Mui-selected {
+  color: #08F7FE !important;
+}
+
+.tab-content {
+  padding: 2rem;
+  background: rgba(10, 26, 59, 0.95);
+  border-radius: 0 0 20px 20px;
+  min-height: 400px;
+}
+
+.detail-section {
+  color: #fff;
+}
+
+.section-title {
+  color: #08F7FE !important;
+  font-family: 'Orbitron', sans-serif !important;
+  margin: 1.5rem 0 1rem !important;
+  font-size: 1.5rem !important;
+  text-shadow: 0 0 10px rgba(8, 247, 254, 0.5);
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(8, 247, 254, 0.3);
+}
+
+.data-list {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 0.5rem !important;
+}
+
+.data-item {
+  border-bottom: 1px solid rgba(8, 247, 254, 0.2);
+  padding: 1rem !important;
+}
+
+.data-text .MuiListItemText-primary {
+  color: #08F7FE !important;
+  font-weight: 500 !important;
+  font-size: 1.1rem !important;
+}
+
+.data-text .MuiListItemText-secondary {
+  color: #fff !important;
+  font-size: 1.2rem !important;
+  margin-top: 0.5rem !important;
+}
+
+.atmosphere-text {
+  color: #fff !important;
+  font-size: 1.2rem !important;
+  margin: 1rem 0 !important;
+  background: rgba(8, 247, 254, 0.1) !important;
+  padding: 1.5rem !important;
+  border-radius: 15px !important;
+  border: 1px solid rgba(8, 247, 254, 0.2);
+  box-shadow: 0 0 20px rgba(8, 247, 254, 0.1);
+}
+
+.atmosphere-details {
+  color: #fff !important;
+  font-size: 1.1rem !important;
+  line-height: 1.8 !important;
+  margin-top: 1.5rem !important;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.detail-divider {
+  margin: 2rem 0 !important;
+  background: linear-gradient(to right, transparent, rgba(8, 247, 254, 0.5), transparent) !important;
+  height: 2px !important;
+}
+
+.curiosities-list {
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.curiosity-item {
+  background: rgba(8, 247, 254, 0.1) !important;
+  margin-bottom: 0.5rem !important;
+  border-radius: 15px !important;
+  padding: 1.5rem !important;
+  border: 1px solid rgba(8, 247, 254, 0.2);
+  transition: all 0.3s ease;
+}
+
+.curiosity-item:hover {
+  background: rgba(8, 247, 254, 0.15) !important;
+  transform: translateX(10px);
+  box-shadow: 0 0 20px rgba(8, 247, 254, 0.2);
+}
+
+.curiosity-item .MuiListItemText-primary {
+  color: #fff !important;
+  font-size: 1.1rem !important;
+  line-height: 1.6 !important;
+  font-weight: 400 !important;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .planet-detail-title {
+    font-size: 2rem !important;
+  }
+
+  .detail-image {
+    height: 300px;
+  }
+
+  .tab-content {
+    padding: 1rem;
+  }
+
+  .atmosphere-text,
+  .atmosphere-details,
+  .curiosity-item {
+    padding: 1rem !important;
+  }
+
+  .section-title {
+    font-size: 1.3rem !important;
+  }
+
+  .planet-name {
+    font-size: 1.5rem !important;
+  }
+
+  .planet-description {
+    font-size: 1rem !important;
+  }
+
+  .planet-image {
+    height: 250px;
+  }
+}
+
+/* Actualizar solo los estilos del botón favorito */
+.favorite-button {
+  position: absolute !important;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7) !important;
+  padding: 8px !important;
+  color: white !important;
+  transition: all 0.3s ease !important;
+  z-index: 10;
+  border: none !important;
+  backdrop-filter: blur(5px);
+}
+
+.favorite-button:hover {
+  background: rgba(255, 46, 99, 0.5) !important;
+  transform: scale(1.1);
+}
+
+.favorite-button.active {
+  color: #ff4081 !important;
+  background: rgba(255, 46, 99, 0.3) !important;
+}
+
+/* Asegurarnos que el contenedor de la imagen mantiene la posición relativa */
+.planet-image-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 10px 10px 0 0;
+}
+
+.planet-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* Añadir estos estilos a tu archivo CSS existente */
+
+.planets-grid {
+  padding: 2rem 0;
+}
+
+/* Contador de favoritos */
+.MuiTab-root .MuiBadge-root {
+  margin-left: 8px;
+}
+
+.custom-tabs {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 5px;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.tab-label {
+  font-family: var(--alt-font) !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  min-height: 48px !important;
+  border-radius: 10px !important;
+  margin: 0 5px !important;
+  transition: all 0.3s ease !important;
+}
+
+.tab-label.Mui-selected {
+  background: rgba(8, 247, 254, 0.15) !important;
+  color: var(--neon-blue) !important;
+  border: 1px solid var(--neon-blue) !important;
+}
+
+.tab-icon {
+  margin-right: 8px;
+} 
