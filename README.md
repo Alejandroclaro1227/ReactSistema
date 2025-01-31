@@ -1,7 +1,11 @@
-# 🌌 Sistema Solar Explorer
+
+![Sistema Solar](https://github.com/TU_USUARIO/TU_REPO/blob/main/planeta.jfif?raw=true)
 
 ## 📝 Descripción
 Una aplicación web interactiva que permite explorar los planetas del Sistema Solar, desarrollada con React y Material-UI. Ofrece una experiencia inmersiva con efectos visuales espaciales y datos astronómicos precisos.
+
+![Tierra](https://github.com/TU_USUARIO/TU_REPO/blob/main/tierra.jfif?raw=true)
+
 
 ## 🎯 Objetivos del Proyecto
 - Crear una interfaz intuitiva para explorar el Sistema Solar
