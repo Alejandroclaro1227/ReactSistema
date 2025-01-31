@@ -64,6 +64,18 @@ Nuestro proyecto **Sistema Solar Explorer** se adapta perfectamente a cualquier 
 - ESLint
 - Git para control de versiones
 
+## 🛰️ Interacción en la Aplicación  
+
+Cuando los usuarios exploran los planetas, pueden interactuar con imágenes en alta resolución para ver detalles fascinantes del **Sistema Solar**. La interfaz permite acercar y visualizar información clave de cada planeta de forma dinámica.  
+
+![Interacción con la Tierra](https://raw.githubusercontent.com/Alejandroclaro1227/ReactSistema/main/pruebas/tierra.jfif)
+
+### 🔥 Características de la Interacción:
+- **Exploración dinámica** de imágenes planetarias.  
+- **Detalles en alta resolución** para una mejor experiencia visual.  
+- **Animaciones y efectos** que enriquecen la navegación.  
+
+
 ## 📂 Estructura del Proyecto
 
 🚀 Mejoras Clave
