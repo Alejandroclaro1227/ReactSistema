@@ -5,6 +5,20 @@
 ## 📝 Descripción
 Una aplicación web interactiva que permite explorar los planetas del Sistema Solar, desarrollada con React y Material-UI. Ofrece una experiencia inmersiva con efectos visuales espaciales y datos astronómicos precisos.
 
+## 📱 Diseño Responsivo
+
+Nuestro proyecto **Sistema Solar Explorer** se adapta perfectamente a cualquier dispositivo, garantizando una experiencia fluida tanto en computadoras de escritorio como en dispositivos móviles y tablets.  
+
+![Vista móvil](https://raw.githubusercontent.com/Alejandroclaro1227/ReactSistema/main/pruebas/mobil.jfif)
+
+- Adaptación fluida a diferentes dispositivos
+- Interfaz optimizada para móviles y tablets
+- Experiencia de usuario consistente en todas las pantallas
+
+### ✨ Características Responsivas:
+- **Diseño adaptable** a diferentes tamaños de pantalla.
+- **Interfaz optimizada** para navegación táctil.
+- **Experiencia consistente** en móviles, tablets y escritorio.
 
 
 ## 🎯 Objetivos del Proyecto
@@ -25,11 +39,6 @@ Una aplicación web interactiva que permite explorar los planetas del Sistema So
 - Almacenamiento local persistente
 - Vista dedicada para planetas favoritos
 - Contador dinámico de favoritos
-
-### 📱 Diseño Responsivo
-- Adaptación fluida a diferentes dispositivos
-- Interfaz optimizada para móviles y tablets
-- Experiencia de usuario consistente en todas las pantallas
 
 ### 🎨 Efectos Visuales
 - Fondo espacial dinámico con estrellas animadas
