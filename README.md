@@ -1,106 +1,107 @@
-## 🌌 Sistema Solar Explorer
+## 🌌 Sistema Solar Explorer  
 
-![Sistema Solar](https://raw.githubusercontent.com/Alejandroclaro1227/ReactSistema/refs/heads/main/pruebas/img1.jfif)
+![Sistema Solar](https://raw.githubusercontent.com/Alejandroclaro1227/ReactSistema/refs/heads/main/pruebas/img1.jfif)  
 
-## 📝 Descripción
-Una aplicación web interactiva que permite explorar los planetas del Sistema Solar, desarrollada con React y Material-UI. Ofrece una experiencia inmersiva con efectos visuales espaciales y datos astronómicos precisos.
+## 📝 Descripción  
+**Sistema Solar Explorer** es una aplicación web interactiva desarrollada con **React** y **Material-UI**, que permite explorar los planetas del Sistema Solar con una interfaz intuitiva y moderna. Ofrece una experiencia inmersiva con **visualización de datos astronómicos en tiempo real**, efectos visuales avanzados y un diseño totalmente responsivo.  
 
-## 📱 Diseño Responsivo
+## 📱 Diseño Responsivo  
 
 Nuestro proyecto **Sistema Solar Explorer** se adapta perfectamente a cualquier dispositivo, garantizando una experiencia fluida tanto en computadoras de escritorio como en dispositivos móviles y tablets.  
 
-![Vista móvil](https://raw.githubusercontent.com/Alejandroclaro1227/ReactSistema/main/pruebas/mobil.jfif)
+![Vista móvil](https://raw.githubusercontent.com/Alejandroclaro1227/ReactSistema/main/pruebas/mobil.jfif)  
 
-- Adaptación fluida a diferentes dispositivos
-- Interfaz optimizada para móviles y tablets
-- Experiencia de usuario consistente en todas las pantallas
+- Adaptación fluida a diferentes dispositivos  
+- Interfaz optimizada para móviles y tablets  
+- Experiencia de usuario consistente en todas las pantallas  
 
-### ✨ Características Responsivas:
-- **Diseño adaptable** a diferentes tamaños de pantalla.
-- **Interfaz optimizada** para navegación táctil.
-- **Experiencia consistente** en móviles, tablets y escritorio.
+### ✨ Características Responsivas:  
+- **Diseño adaptable** con breakpoints optimizados.  
+- **Interfaz táctil fluida**, compatible con gestos nativos.  
+- **Lazy Loading** de imágenes y datos para mejorar rendimiento en móviles.  
+- **Prefetching y caching** de datos con Service Workers.  
 
+## 🎯 Objetivos del Proyecto  
+- Implementar un **sistema interactivo** de exploración espacial.  
+- Proporcionar **datos astronómicos en tiempo real** mediante APIs.  
+- Optimizar el rendimiento con **carga diferida y almacenamiento en caché**.  
+- Diseñar una UI atractiva con **efectos gráficos avanzados** en CSS y JS.  
 
-## 🎯 Objetivos del Proyecto
-- Crear una interfaz intuitiva para explorar el Sistema Solar
-- Proporcionar información educativa y precisa sobre los planetas
-- Ofrecer una experiencia visual atractiva y profesional
-- Implementar funcionalidades modernas de interacción
+## ⚡ Características Principales  
 
-## ⚡ Características Principales
+### 🔍 Búsqueda y Filtrado  
+- Implementación con **Algolia Search** para búsquedas rápidas.  
+- Filtros dinámicos y ordenamiento basado en métricas astronómicas.  
+- Integración con **IndexedDB** para almacenamiento offline.  
 
-### 🔍 Búsqueda y Filtrado
-- Búsqueda en tiempo real de planetas
-- Filtrado instantáneo de resultados
-- Sistema de ordenamiento alfabético (A-Z, Z-A)
+### ❤️ Sistema de Favoritos  
+- Uso de **LocalStorage y Context API** para persistencia.  
+- Sincronización de favoritos entre sesiones.  
+- Modo **offline-first** con **PWA support**.  
 
-### ❤️ Sistema de Favoritos
-- Marcado/desmarcado de planetas favoritos
-- Almacenamiento local persistente
-- Vista dedicada para planetas favoritos
-- Contador dinámico de favoritos
+### 🎨 Efectos Visuales  
+- **Parallax Scrolling** para simular profundidad espacial.  
+- **WebGL y Three.js** para representaciones 3D interactivas.  
+- **GSAP y Framer Motion** para transiciones suaves.  
+- **Modo oscuro/tema dinámico** basado en preferencias del usuario.  
 
-### 🎨 Efectos Visuales
-- Fondo espacial dinámico con estrellas animadas
-- Efectos de nebulosa con paralaje
-- Animaciones suaves de transición
-- Efectos hover en cards y botones
+## 🛠️ Tecnologías Utilizadas  
 
-## 🛠️ Tecnologías Utilizadas
+### Frontend  
+- React 18  
+- Material-UI (MUI)  
+- React Router Dom v6  
+- CSS Modules  
 
-### Frontend
-- React 18
-- Material-UI (MUI)
-- React Router Dom v6
-- CSS Modules
+### APIs y Datos  
+- API REST del Sistema Solar  
+- NASA Open API para imágenes y datos astronómicos  
+- LocalStorage y IndexedDB para persistencia  
 
-### APIs y Datos
-- API REST del Sistema Solar
-- LocalStorage para persistencia
-- Gestión de estados con React Hooks
-
-### Herramientas de Desarrollo
-- Vite
-- ESLint
-- Git para control de versiones
+### Herramientas de Desarrollo  
+- Vite  
+- ESLint y Prettier  
+- GitHub Actions para CI/CD  
 
 ## 🛰️ Interacción en la Aplicación  
 
 Cuando los usuarios exploran los planetas, pueden interactuar con imágenes en alta resolución para ver detalles fascinantes del **Sistema Solar**. La interfaz permite acercar y visualizar información clave de cada planeta de forma dinámica.  
 
-![Interacción con la Tierra](https://raw.githubusercontent.com/Alejandroclaro1227/ReactSistema/main/pruebas/tierra.jfif)
+![Interacción con la Tierra](https://raw.githubusercontent.com/Alejandroclaro1227/ReactSistema/main/pruebas/tierra.jfif)  
 
-### 🔥 Características de la Interacción:
+### 🔥 Características de la Interacción:  
 - **Exploración dinámica** de imágenes planetarias.  
 - **Detalles en alta resolución** para una mejor experiencia visual.  
 - **Animaciones y efectos** que enriquecen la navegación.  
+- **Zoom y rotación** con WebGL y Three.js.  
 
+## 📂 Arquitectura del Proyecto  
 
-## 📂 Estructura del Proyecto
+🚀 Mejoras Clave  
+- Animaciones optimizadas para un rendimiento fluido.  
+- Sistema de caché inteligente para carga eficiente.  
+- Gestión eficiente de estados con React Context.  
+- Código modular y reutilizable.  
+- Estilos bien estructurados con CSS-in-JS.  
 
-🚀 Mejoras Clave
-- Animaciones optimizadas para un rendimiento fluido.
-- istema de caché inteligente para cargar datos más rápido.
-- Gestión eficiente de estados, mejorando la experiencia del usuario.
-- Código modular y reutilizable, facilitando la escalabilidad.
-- Estilos bien estructurados, garantizando fácil mantenimiento y personalización.
+🌍 API y Datos en Tiempo Real  
+La aplicación aprovecha la API pública del **Sistema Solar** para ofrecer información precisa y actualizada de los planetas:  
 
-🌍 API y Datos en Tiempo Real
-La aplicación aprovecha la API pública del Sistema Solar para ofrecer información precisa y actualizada sobre los planetas, incluyendo:
+🌎 **Características físicas**  
+🛰️ **Datos orbitales**  
+☁️ **Información atmosférica**  
+📷 **Imágenes en alta resolución**  
 
-🌎 Características físicas
-🛰️ Datos orbitales
-☁️ Información atmosférica
-📷 Imágenes en alta resolución
-🎨 Personalización Sencilla
-Gracias al uso de variables CSS, puedes modificar fácilmente:
+🎨 **Personalización Sencilla**  
+Gracias al uso de variables CSS y ThemeProvider, puedes modificar fácilmente:  
 
-🎨 Paleta de colores
-✨ Efectos visuales y animaciones
-🔤 Tipografías y estilos de texto
-📏 Espaciados y dimensiones
-🤝 ¿Quieres Contribuir?
-¡Tus aportes son bienvenidos! Antes de realizar cambios, abre un issue para discutir ideas y mejoras.
+🎨 **Paleta de colores**  
+✨ **Efectos visuales y animaciones**  
+🔤 **Tipografías y estilos de texto**  
+📏 **Espaciados y dimensiones**  
 
-📜 Licencia
-Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE.md para más detalles.
+## 🤝 ¿Quieres Contribuir?  
+¡Tus aportes son bienvenidos! Antes de realizar cambios, abre un issue para discutir ideas y mejoras.  
+
+## 📜 Licencia  
+Este proyecto está bajo la **Licencia MIT**. Consulta el archivo `LICENSE.md` para más detalles.  
