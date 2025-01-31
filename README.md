@@ -1,5 +1,5 @@
 
-![Sistema Solar](https://github.com/TU_USUARIO/TU_REPO/blob/main/planeta.jfif?raw=true)
+![Sistema Solar]([https://github.com/TU_USUARIO/TU_REPO/blob/main/planeta.jfif?raw=true](https://raw.githubusercontent.com/Alejandroclaro1227/ReactSistema/refs/heads/main/pruebas/img1.jfif))
 
 ## 📝 Descripción
 Una aplicación web interactiva que permite explorar los planetas del Sistema Solar, desarrollada con React y Material-UI. Ofrece una experiencia inmersiva con efectos visuales espaciales y datos astronómicos precisos.
